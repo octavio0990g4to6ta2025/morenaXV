@@ -1,0 +1,3050 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Morena | Mis 15</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* =========================================================
+   PALETA
+========================================================= */
+
+:root{
+
+    --rosa:#f7b7ce;
+    --rosa-claro:#fff1f7;
+    --rosa-medio:#e88dad;
+
+    --rosa-fuerte:#c85c83;
+
+    --dorado:#d8b45a;
+    --dorado-claro:#f5df9c;
+
+    --crema:#fffaf5;
+    --blanco:#ffffff;
+
+    --texto:#543641;
+    --texto-suave:#856b74;
+
+    --titulo:"Cormorant Garamond",serif;
+    --script:"Great Vibes",cursive;
+    --normal:"DM Sans",sans-serif;
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:var(--crema);
+
+    color:var(--texto);
+
+    font-family:var(--normal);
+
+    overflow-x:hidden;
+}
+
+button,
+input,
+select{
+    font-family:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
+
+/* =========================================================
+   FONDO DECORATIVO
+========================================================= */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:100;
+
+    opacity:.22;
+
+    background-image:
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(216,180,90,.45) 1px,
+            transparent 2px
+        ),
+
+        radial-gradient(
+            circle at 80% 60%,
+            rgba(216,180,90,.3) 1px,
+            transparent 2px
+        );
+
+    background-size:
+        90px 90px,
+        130px 130px;
+}
+
+
+/* =========================================================
+   BRILLOS
+========================================================= */
+
+.brillo{
+
+    position:fixed;
+
+    z-index:20;
+
+    color:var(--dorado);
+
+    pointer-events:none;
+
+    animation:brillar 3s infinite ease-in-out;
+}
+
+.b1{
+    top:15%;
+    left:7%;
+}
+
+.b2{
+    top:38%;
+    right:8%;
+    animation-delay:1s;
+}
+
+.b3{
+    top:72%;
+    left:10%;
+    animation-delay:2s;
+}
+
+.b4{
+    top:85%;
+    right:12%;
+    animation-delay:.5s;
+}
+
+@keyframes brillar{
+
+    0%,100%{
+        opacity:.2;
+        transform:scale(.7) rotate(0deg);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.3) rotate(25deg);
+    }
+}
+
+
+/* =========================================================
+   PORTADA
+========================================================= */
+
+.hero{
+
+    min-height:100svh;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(82,28,51,.35),
+            rgba(255,180,210,.18)
+        ),
+
+        url("foto1.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+}
+
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            rgba(30,10,20,.08),
+            rgba(30,10,20,.5)
+        );
+}
+
+
+.marco-hero{
+
+    position:absolute;
+
+    inset:22px;
+
+    border:1px solid rgba(245,223,156,.7);
+
+    z-index:2;
+
+    pointer-events:none;
+}
+
+
+.marco-hero::before{
+
+    content:"✦";
+
+    position:absolute;
+
+    top:-18px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:#8c5267;
+
+    padding:0 15px;
+
+    color:var(--dorado-claro);
+
+    font-size:22px;
+}
+
+
+.hero-contenido{
+
+    position:relative;
+
+    z-index:3;
+
+    width:92%;
+
+    max-width:850px;
+
+    text-align:center;
+
+    color:white;
+
+    animation:entrada 1.5s ease;
+}
+
+
+.mini{
+
+    text-transform:uppercase;
+
+    letter-spacing:7px;
+
+    font-size:10px;
+
+    margin-bottom:20px;
+
+    color:#ffeec2;
+}
+
+
+.hero h1{
+
+    font-family:var(--script);
+
+    font-size:clamp(95px,20vw,190px);
+
+    line-height:.8;
+
+    font-weight:400;
+
+    text-shadow:
+        0 5px 25px rgba(0,0,0,.2);
+}
+
+
+.hero-sub{
+
+    font-family:var(--titulo);
+
+    font-size:27px;
+
+    letter-spacing:4px;
+
+    margin-top:20px;
+}
+
+
+.linea{
+
+    width:90px;
+
+    height:1px;
+
+    background:var(--dorado-claro);
+
+    margin:25px auto;
+}
+
+
+.hero-frase{
+
+    max-width:550px;
+
+    margin:auto;
+
+    font-family:var(--titulo);
+
+    font-size:21px;
+
+    line-height:1.5;
+}
+
+
+/* =========================================================
+   BOTÓN PRINCIPAL
+========================================================= */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    min-height:55px;
+
+    padding:15px 30px;
+
+    border-radius:50px;
+
+    border:1px solid var(--dorado);
+
+    text-decoration:none;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    transition:.35s;
+
+    margin-top:30px;
+}
+
+
+.btn-gold{
+
+    background:
+        linear-gradient(
+            135deg,
+            #e6c86e,
+            #b58a32
+        );
+
+    color:white;
+
+    box-shadow:
+        0 12px 35px rgba(110,70,20,.25);
+}
+
+
+.btn-gold:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 18px 45px rgba(110,70,20,.35);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro{
+
+    padding:110px 20px 90px;
+
+    text-align:center;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 0,
+            #ffe2ee,
+            transparent 45%
+        ),
+
+        var(--crema);
+
+    position:relative;
+}
+
+
+.script{
+
+    font-family:var(--script);
+
+    color:var(--rosa-fuerte);
+
+    font-size:45px;
+}
+
+
+.titulo{
+
+    font-family:var(--titulo);
+
+    font-weight:500;
+
+    font-size:clamp(48px,9vw,75px);
+
+    line-height:.95;
+
+    color:#8e5369;
+
+    margin:8px 0 20px;
+}
+
+
+.texto{
+
+    max-width:600px;
+
+    margin:auto;
+
+    line-height:1.9;
+
+    font-size:14px;
+
+    color:var(--texto-suave);
+}
+
+
+/* =========================================================
+   FOTO FLOTANTE
+========================================================= */
+
+.foto-flotante{
+
+    width:230px;
+
+    height:300px;
+
+    margin:50px auto 0;
+
+    padding:8px;
+
+    background:white;
+
+    border:1px solid var(--dorado);
+
+    transform:rotate(-4deg);
+
+    box-shadow:
+        0 25px 60px rgba(90,40,60,.15);
+
+    position:relative;
+}
+
+
+.foto-flotante::after{
+
+    content:"✦";
+
+    position:absolute;
+
+    right:-20px;
+
+    bottom:15px;
+
+    color:var(--dorado);
+
+    font-size:28px;
+}
+
+
+.foto-flotante img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+}
+
+
+/* =========================================================
+   COUNTDOWN
+========================================================= */
+
+.count-section{
+
+    padding:100px 18px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #df86a8,
+            #c9688d
+        );
+
+    color:white;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+
+.count-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:50%;
+
+    top:-250px;
+
+    left:-200px;
+}
+
+
+.count-section .titulo{
+
+    color:white;
+}
+
+
+.count-section .script{
+
+    color:#ffe7a9;
+}
+
+
+.countdown{
+
+    max-width:760px;
+
+    margin:50px auto 0;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:12px;
+}
+
+
+.time{
+
+    padding:25px 5px;
+
+    border-top:1px solid rgba(255,235,180,.8);
+
+    border-bottom:1px solid rgba(255,235,180,.8);
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(8px);
+}
+
+
+.time strong{
+
+    display:block;
+
+    font-family:var(--titulo);
+
+    font-size:clamp(45px,9vw,75px);
+
+    font-weight:500;
+}
+
+
+.time span{
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-size:9px;
+
+    opacity:.85;
+}
+
+
+.llego{
+
+    font-family:var(--script);
+
+    font-size:40px;
+
+    margin-top:35px;
+
+    color:#ffe7a9;
+}
+
+
+/* =========================================================
+   FECHA
+========================================================= */
+
+.fecha{
+
+    padding:110px 20px;
+
+    text-align:center;
+
+    background:#fff;
+}
+
+
+.calendario{
+
+    max-width:350px;
+
+    margin:45px auto 0;
+
+    padding:45px 25px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #fff,
+            #fff5f8
+        );
+
+    border:1px solid var(--dorado);
+
+    box-shadow:
+        0 25px 70px rgba(90,40,60,.1);
+
+    position:relative;
+}
+
+
+.calendario::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:10px;
+
+    border:1px solid rgba(216,180,90,.35);
+
+    pointer-events:none;
+}
+
+
+.cal-titulo{
+
+    font-size:10px;
+
+    letter-spacing:5px;
+
+    color:var(--dorado);
+}
+
+
+.cal-dia{
+
+    font-family:var(--titulo);
+
+    font-size:110px;
+
+    color:#a35f79;
+
+    line-height:.9;
+
+    margin-top:20px;
+}
+
+
+.cal-mes{
+
+    letter-spacing:7px;
+
+    font-size:14px;
+
+    color:#7d5966;
+}
+
+
+.cal-anio{
+
+    font-family:var(--titulo);
+
+    font-size:32px;
+
+    margin-top:8px;
+
+    color:#9c7782;
+}
+
+
+.cal-hora{
+
+    margin-top:20px;
+
+    padding-top:20px;
+
+    border-top:1px solid var(--dorado);
+
+    letter-spacing:4px;
+
+    font-size:12px;
+}
+
+
+/* =========================================================
+   GALERÍA DISPERSA
+========================================================= */
+
+.galeria-section{
+
+    padding:110px 15px;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 30%,
+            #ffe3ee,
+            transparent 35%
+        ),
+
+        #fff5f9;
+}
+
+
+.galeria{
+
+    max-width:1000px;
+
+    margin:70px auto 0;
+
+    position:relative;
+
+    height:800px;
+}
+
+
+.gallery-photo{
+
+    position:absolute;
+
+    padding:8px;
+
+    background:white;
+
+    border:1px solid var(--dorado);
+
+    box-shadow:
+        0 25px 60px rgba(90,40,60,.15);
+
+    transition:.5s;
+}
+
+
+.gallery-photo img{
+
+    display:block;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+}
+
+
+.gallery-photo:hover{
+
+    transform:rotate(0deg) scale(1.05);
+
+    z-index:5;
+}
+
+
+.photo-a{
+
+    width:310px;
+
+    height:420px;
+
+    left:5%;
+
+    top:0;
+
+    transform:rotate(-5deg);
+}
+
+
+.photo-b{
+
+    width:260px;
+
+    height:330px;
+
+    right:8%;
+
+    top:50px;
+
+    transform:rotate(6deg);
+}
+
+
+.photo-c{
+
+    width:270px;
+
+    height:350px;
+
+    left:35%;
+
+    bottom:10px;
+
+    transform:rotate(-2deg);
+}
+
+
+.photo-d{
+
+    width:190px;
+
+    height:240px;
+
+    right:2%;
+
+    bottom:0;
+
+    transform:rotate(5deg);
+}
+
+
+/* =========================================================
+   SALÓN
+========================================================= */
+
+.salon{
+
+    padding:110px 20px;
+
+    background:#fff;
+
+    text-align:center;
+}
+
+
+.salon-grid{
+
+    max-width:950px;
+
+    margin:55px auto 0;
+
+    display:grid;
+
+    grid-template-columns:1.2fr .8fr;
+
+    gap:15px;
+}
+
+
+.salon-photo{
+
+    overflow:hidden;
+
+    border:7px solid white;
+
+    outline:1px solid var(--dorado);
+
+    box-shadow:
+        0 25px 60px rgba(80,40,60,.12);
+}
+
+
+.salon-photo img{
+
+    display:block;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.6s;
+}
+
+
+.salon-photo:hover img{
+
+    transform:scale(1.04);
+}
+
+
+.salon-main{
+
+    min-height:420px;
+}
+
+
+.salon-small{
+
+    min-height:200px;
+}
+
+
+.salon-info{
+
+    max-width:650px;
+
+    margin:40px auto 0;
+}
+
+
+.salon-name{
+
+    font-family:var(--titulo);
+
+    font-size:52px;
+
+    color:#92576d;
+}
+
+
+.salon-address{
+
+    margin-top:10px;
+
+    line-height:1.8;
+
+    color:var(--texto-suave);
+
+    font-size:14px;
+}
+
+
+/* =========================================================
+   DRESS CODE
+========================================================= */
+
+.dress{
+
+    padding:110px 20px;
+
+    text-align:center;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #fff,
+            #fff0f6
+        );
+}
+
+
+.dress-icon{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    border:1px solid var(--dorado);
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:var(--dorado);
+
+    font-size:30px;
+}
+
+
+.dress-name{
+
+    font-family:var(--titulo);
+
+    font-size:50px;
+
+    color:#965a71;
+
+    margin:25px 0 10px;
+}
+
+
+/* =========================================================
+   ENTRADA
+========================================================= */
+
+.entrada{
+
+    padding:110px 20px;
+
+    text-align:center;
+
+    background:#fff;
+}
+
+
+.entrada-card{
+
+    max-width:650px;
+
+    margin:50px auto 0;
+
+    padding:55px 25px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #fff,
+            #fff5f8
+        );
+
+    border:1px solid var(--dorado);
+
+    box-shadow:
+        0 25px 70px rgba(90,40,60,.1);
+}
+
+
+.precio{
+
+    font-family:var(--titulo);
+
+    font-size:75px;
+
+    color:#a05e78;
+
+    margin:20px 0;
+}
+
+
+.info{
+
+    padding:18px;
+
+    background:#fff0f6;
+
+    font-size:12px;
+
+    color:var(--texto-suave);
+}
+
+
+/* =========================================================
+   MÚSICA AMBIENTAL
+========================================================= */
+
+.music{
+
+    position:fixed;
+
+    right:18px;
+
+    bottom:18px;
+
+    z-index:50;
+}
+
+
+.music-button{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    border:1px solid var(--dorado);
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #e4c86d,
+            #b98d38
+        );
+
+    color:white;
+
+    box-shadow:
+        0 10px 30px rgba(80,40,20,.25);
+
+    font-size:19px;
+}
+
+
+/* =========================================================
+   CANCIÓN DE LOS INVITADOS
+========================================================= */
+
+.songs{
+
+    padding:110px 20px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #d9779b,
+            #c15e83
+        );
+
+    color:white;
+
+    text-align:center;
+}
+
+
+.songs .titulo{
+
+    color:white;
+}
+
+
+.form{
+
+    max-width:600px;
+
+    margin:50px auto 0;
+
+    padding:35px 22px;
+
+    background:rgba(255,255,255,.1);
+
+    border:1px solid rgba(255,231,170,.7);
+
+    backdrop-filter:blur(15px);
+
+    text-align:left;
+}
+
+
+.form label{
+
+    display:block;
+
+    font-size:11px;
+
+    margin:15px 0;
+}
+
+
+.form input,
+.form select{
+
+    width:100%;
+
+    margin-top:7px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    outline:none;
+
+    background:white;
+
+    color:#543641;
+}
+
+
+/* =========================================================
+   CIERRE
+========================================================= */
+
+.cierre{
+
+    padding:110px 20px 140px;
+
+    text-align:center;
+
+    background:#fff9fb;
+}
+
+
+.cierre-foto{
+
+    width:280px;
+
+    height:360px;
+
+    margin:40px auto;
+
+    padding:8px;
+
+    border:1px solid var(--dorado);
+
+    background:white;
+
+    transform:rotate(3deg);
+
+    box-shadow:
+        0 25px 60px rgba(90,40,60,.15);
+}
+
+
+.cierre-foto img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+}
+
+
+.cierre-nombre{
+
+    font-family:var(--script);
+
+    font-size:90px;
+
+    color:#a05e78;
+}
+
+
+
+
+/* =========================================================
+   DETALLES ELEGANTES AGREGADOS
+   Decoración estática: sin animaciones nuevas.
+========================================================= */
+
+.separador-elegante{
+    width:min(180px,45%);
+    height:22px;
+    margin:0 auto;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--dorado);
+    font-size:13px;
+    letter-spacing:9px;
+}
+
+.separador-elegante::before,
+.separador-elegante::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    width:calc(50% - 25px);
+    height:1px;
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(216,180,90,.55)
+    );
+}
+
+.separador-elegante::before{
+    right:50%;
+}
+
+.separador-elegante::after{
+    left:50%;
+    transform:scaleX(-1);
+}
+
+.detalle-corona{
+    width:62px;
+    height:62px;
+    margin:0 auto 18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid rgba(216,180,90,.55);
+    border-radius:50%;
+    color:var(--dorado);
+    font-size:23px;
+    background:rgba(255,255,255,.45);
+    box-shadow:
+        0 10px 30px rgba(120,70,90,.08),
+        inset 0 0 0 5px rgba(255,255,255,.5);
+}
+
+.detalle-corona::before,
+.detalle-corona::after{
+    content:"✦";
+    font-size:8px;
+    margin:0 8px;
+    opacity:.65;
+}
+
+.frase-especial{
+    max-width:650px;
+    margin:32px auto 0;
+    padding:22px 28px;
+    border-top:1px solid rgba(216,180,90,.45);
+    border-bottom:1px solid rgba(216,180,90,.45);
+    font-family:var(--titulo);
+    font-size:21px;
+    line-height:1.55;
+    color:#9a5d76;
+    position:relative;
+}
+
+.frase-especial::before{
+    content:"✦";
+    position:absolute;
+    top:-11px;
+    left:50%;
+    transform:translateX(-50%);
+    padding:0 10px;
+    background:var(--crema);
+    color:var(--dorado);
+    font-size:13px;
+}
+
+.intro .titulo,
+.galeria-section .titulo,
+.salon .titulo,
+.entrada .titulo,
+.songs .titulo{
+    position:relative;
+    display:inline-block;
+}
+
+.intro .titulo::after,
+.galeria-section .titulo::after,
+.salon .titulo::after,
+.entrada .titulo::after,
+.songs .titulo::after{
+    content:"✦";
+    position:absolute;
+    right:-28px;
+    top:-8px;
+    color:var(--dorado);
+    font-size:13px;
+}
+
+.gallery-photo::before,
+.gallery-photo::after{
+    position:absolute;
+    z-index:3;
+    color:var(--dorado);
+    font-size:13px;
+    line-height:1;
+    text-shadow:0 0 8px rgba(216,180,90,.35);
+    pointer-events:none;
+}
+
+.gallery-photo::before{
+    content:"✦";
+    top:-8px;
+    left:-8px;
+}
+
+.gallery-photo::after{
+    content:"✧";
+    right:-8px;
+    bottom:-8px;
+}
+
+.foto-flotante::before,
+.foto-flotante::after,
+.cierre-foto::before,
+.cierre-foto::after{
+    position:absolute;
+    color:var(--dorado);
+    font-size:12px;
+    z-index:3;
+    pointer-events:none;
+}
+
+.foto-flotante::before,
+.cierre-foto::before{
+    content:"✦";
+    top:-8px;
+    left:-8px;
+}
+
+.foto-flotante::after,
+.cierre-foto::after{
+    content:"✧";
+    right:-8px;
+    bottom:-8px;
+}
+
+.foto-flotante,
+.cierre-foto{
+    overflow:visible;
+}
+
+.salon-photo{
+    position:relative;
+}
+
+.salon-photo::before,
+.salon-photo::after{
+    content:"✦";
+    position:absolute;
+    z-index:3;
+    color:var(--dorado-claro);
+    font-size:12px;
+    text-shadow:0 0 8px rgba(216,180,90,.35);
+    pointer-events:none;
+}
+
+.salon-photo::before{
+    top:7px;
+    left:7px;
+}
+
+.salon-photo::after{
+    right:7px;
+    bottom:7px;
+}
+
+.calendario{
+    overflow:visible;
+}
+
+.calendario::after{
+    content:"✦  ✧  ✦";
+    position:absolute;
+    bottom:-18px;
+    left:50%;
+    transform:translateX(-50%);
+    color:var(--dorado);
+    font-size:10px;
+    letter-spacing:3px;
+    white-space:nowrap;
+}
+
+.dress{
+    position:relative;
+}
+
+.dress::before,
+.dress::after{
+    content:"✦";
+    position:absolute;
+    top:50%;
+    color:rgba(216,180,90,.32);
+    font-size:18px;
+}
+
+.dress::before{ left:8%; }
+.dress::after{ right:8%; }
+
+.entrada-card,
+.form{
+    position:relative;
+}
+
+.entrada-card::before,
+.entrada-card::after,
+.form::before,
+.form::after{
+    content:"✦";
+    position:absolute;
+    color:var(--dorado);
+    font-size:12px;
+    pointer-events:none;
+}
+
+.entrada-card::before,
+.form::before{
+    top:13px;
+    left:15px;
+}
+
+.entrada-card::after,
+.form::after{
+    right:15px;
+    bottom:13px;
+}
+
+.cierre{
+    position:relative;
+}
+
+.cierre .script{
+    position:relative;
+    display:inline-block;
+}
+
+.cierre .script::before,
+.cierre .script::after{
+    content:"✦";
+    position:absolute;
+    top:50%;
+    color:var(--dorado);
+    font-family:var(--normal);
+    font-size:11px;
+}
+
+.cierre .script::before{
+    right:calc(100% + 15px);
+}
+
+.cierre .script::after{
+    left:calc(100% + 15px);
+}
+
+@media(max-width:600px){
+
+    .separador-elegante{
+        margin-top:2px;
+        margin-bottom:2px;
+    }
+
+    .frase-especial{
+        padding:18px 18px;
+        font-size:19px;
+    }
+
+    .intro .titulo::after,
+    .galeria-section .titulo::after,
+    .salon .titulo::after,
+    .entrada .titulo::after,
+    .songs .titulo::after{
+        right:-21px;
+        font-size:11px;
+    }
+
+    .dress::before{ left:4%; }
+    .dress::after{ right:4%; }
+}
+
+
+
+
+/* =========================================================
+   DETALLES BOTÁNICOS — LAURELES, ROSAS Y RAMITAS
+   Decoración elegante distribuida por toda la invitación.
+========================================================= */
+
+.adorno-botanico{
+    width:min(340px,82%);
+    height:48px;
+    margin:8px auto 22px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--dorado);
+    opacity:.78;
+    pointer-events:none;
+}
+
+.adorno-botanico::before{
+    content:"❧  ❀  ❧";
+    font-family:var(--titulo);
+    font-size:28px;
+    letter-spacing:7px;
+    transform:rotate(-1deg);
+    text-shadow:0 1px 5px rgba(180,130,60,.12);
+}
+
+.adorno-botanico::after{
+    content:"";
+    position:absolute;
+    left:8%;
+    right:8%;
+    top:50%;
+    height:1px;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(190,145,75,.34),
+        transparent
+    );
+    z-index:-1;
+}
+
+.adorno-lateral{
+    position:absolute;
+    width:95px;
+    height:135px;
+    pointer-events:none;
+    opacity:.32;
+    color:var(--dorado);
+    z-index:0;
+}
+
+.adorno-lateral::before{
+    content:"❧";
+    position:absolute;
+    font-family:Georgia,serif;
+    font-size:90px;
+    line-height:1;
+}
+
+.adorno-lateral.izq{
+    left:0;
+    top:18%;
+    transform:rotate(18deg);
+}
+
+.adorno-lateral.der{
+    right:0;
+    top:52%;
+    transform:scaleX(-1) rotate(18deg);
+}
+
+.adorno-lateral.izq::after,
+.adorno-lateral.der::after{
+    content:"✿  ❧";
+    position:absolute;
+    font-family:Georgia,serif;
+    font-size:19px;
+    letter-spacing:8px;
+    top:45px;
+    left:20px;
+}
+
+.rosa-dorada{
+    width:58px;
+    height:58px;
+    margin:0 auto 14px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--dorado);
+    font-size:27px;
+    opacity:.72;
+}
+
+.rosa-dorada::before{
+    content:"";
+    position:absolute;
+    inset:5px;
+    border:1px solid rgba(190,145,75,.35);
+    border-radius:50%;
+}
+
+.rosa-dorada::after{
+    content:"❀";
+    position:absolute;
+    font-size:25px;
+}
+
+.borde-rosa{
+    position:relative;
+}
+
+.borde-rosa::before,
+.borde-rosa::after{
+    content:"❧  ✿";
+    position:absolute;
+    color:rgba(190,145,75,.52);
+    font-family:Georgia,serif;
+    font-size:17px;
+    letter-spacing:3px;
+    pointer-events:none;
+    z-index:2;
+}
+
+.borde-rosa::before{
+    left:8px;
+    top:8px;
+}
+
+.borde-rosa::after{
+    right:8px;
+    bottom:8px;
+    transform:rotate(180deg);
+}
+
+@media(max-width:700px){
+    .adorno-lateral{
+        width:65px;
+        height:100px;
+        opacity:.22;
+    }
+
+    .adorno-lateral::before{
+        font-size:65px;
+    }
+
+    .adorno-lateral.izq::after,
+    .adorno-lateral.der::after{
+        font-size:14px;
+        top:34px;
+        left:12px;
+    }
+
+    .adorno-botanico{
+        width:90%;
+    }
+}
+
+
+
+
+/* =========================================================
+   LLUVIA ELEGANTE — PÉTALOS Y DESTELLOS
+   Capa decorativa, independiente del contenido existente.
+========================================================= */
+
+.lluvia-decorativa{
+    position:fixed;
+    inset:0;
+    z-index:1;
+    pointer-events:none;
+    overflow:hidden;
+}
+
+.lluvia-decorativa span{
+    position:absolute;
+    top:-12vh;
+    left:var(--x);
+    width:var(--size);
+    height:var(--size);
+    opacity:var(--op);
+    color:var(--c);
+    font-size:var(--font);
+    line-height:1;
+    animation:
+        caer-suave var(--dur) linear var(--delay) infinite,
+        girar-suave var(--spin) ease-in-out var(--delay) infinite;
+    filter:drop-shadow(0 0 4px rgba(214,174,91,.16));
+}
+
+.lluvia-decorativa .petalo{
+    transform:rotate(25deg);
+}
+
+.lluvia-decorativa .brillito{
+    font-size:calc(var(--font) * .7);
+}
+
+@keyframes caer-suave{
+    0%{
+        transform:translate3d(0,-12vh,0) rotate(0deg);
+    }
+    35%{
+        transform:translate3d(var(--drift),35vh,0) rotate(100deg);
+    }
+    70%{
+        transform:translate3d(calc(var(--drift) * -0.5),70vh,0) rotate(210deg);
+    }
+    100%{
+        transform:translate3d(var(--drift),112vh,0) rotate(330deg);
+    }
+}
+
+@keyframes girar-suave{
+    0%,100%{ margin-left:0; }
+    50%{ margin-left:8px; }
+}
+
+@media(prefers-reduced-motion:reduce){
+    .lluvia-decorativa span{
+        animation:none;
+        top:12%;
+    }
+
+    .lluvia-decorativa span:nth-child(n+7){
+        display:none;
+    }
+}
+
+@media(max-width:600px){
+    .lluvia-decorativa span:nth-child(n+9){
+        display:none;
+    }
+}
+
+
+/* =========================================================
+   ANIMACIONES SCROLL
+========================================================= */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(35px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+
+.reveal.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+
+@keyframes entrada{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media(max-width:700px){
+
+    .marco-hero{
+        inset:13px;
+    }
+
+
+    .hero h1{
+        font-size:95px;
+    }
+
+
+    .hero-sub{
+        font-size:20px;
+    }
+
+
+    .countdown{
+        gap:4px;
+    }
+
+
+    .time{
+        padding:18px 2px;
+    }
+
+
+    .time strong{
+        font-size:34px;
+    }
+
+
+    .time span{
+        font-size:7px;
+        letter-spacing:1px;
+    }
+
+
+    .galeria{
+        height:900px;
+    }
+
+
+    .photo-a{
+        width:210px;
+        height:290px;
+        left:0;
+    }
+
+
+    .photo-b{
+        width:180px;
+        height:240px;
+        right:0;
+        top:180px;
+    }
+
+
+    .photo-c{
+        width:210px;
+        height:280px;
+        left:18%;
+        bottom:100px;
+    }
+
+
+    .photo-d{
+        width:150px;
+        height:200px;
+        right:0;
+        bottom:0;
+    }
+
+
+    .salon-grid{
+        grid-template-columns:1fr;
+    }
+
+
+    .salon-main{
+        min-height:300px;
+    }
+
+
+    .salon-small{
+        min-height:220px;
+    }
+
+
+    .precio{
+        font-size:55px;
+    }
+
+
+    .cierre-nombre{
+        font-size:70px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+<div class="lluvia-decorativa" aria-hidden="true">
+    <span class="petalo" style="--x:4%;--size:15px;--font:15px;--op:.34;--c:#d6b56d;--dur:14s;--delay:-3s;--drift:24px;--spin:4s">✿</span>
+    <span class="brillito" style="--x:13%;--size:10px;--font:12px;--op:.42;--c:#caa45c;--dur:11s;--delay:-7s;--drift:18px;--spin:3s">✦</span>
+    <span class="petalo" style="--x:22%;--size:13px;--font:13px;--op:.28;--c:#c88fa2;--dur:16s;--delay:-11s;--drift:-20px;--spin:5s">❀</span>
+    <span class="brillito" style="--x:31%;--size:9px;--font:11px;--op:.40;--c:#d8b45f;--dur:13s;--delay:-5s;--drift:22px;--spin:4s">✧</span>
+    <span class="petalo" style="--x:42%;--size:14px;--font:14px;--op:.30;--c:#d6b56d;--dur:15s;--delay:-13s;--drift:-18px;--spin:5s">✿</span>
+    <span class="brillito" style="--x:53%;--size:11px;--font:12px;--op:.43;--c:#caa45c;--dur:12s;--delay:-1s;--drift:20px;--spin:3s">✦</span>
+    <span class="petalo" style="--x:64%;--size:13px;--font:13px;--op:.27;--c:#c88fa2;--dur:17s;--delay:-9s;--drift:23px;--spin:5s">❀</span>
+    <span class="brillito" style="--x:73%;--size:9px;--font:11px;--op:.38;--c:#d8b45f;--dur:11s;--delay:-6s;--drift:-21px;--spin:4s">✧</span>
+    <span class="petalo" style="--x:83%;--size:15px;--font:15px;--op:.32;--c:#d6b56d;--dur:15s;--delay:-4s;--drift:17px;--spin:5s">✿</span>
+    <span class="brillito" style="--x:93%;--size:10px;--font:12px;--op:.40;--c:#caa45c;--dur:13s;--delay:-12s;--drift:-19px;--spin:3s">✦</span>
+</div>
+
+
+
+
+<!-- BRILLOS -->
+
+<div class="brillo b1">✦</div>
+<div class="brillo b2">✧</div>
+<div class="brillo b3">✦</div>
+<div class="brillo b4">✧</div>
+
+
+
+<!-- =====================================================
+     PORTADA
+===================================================== -->
+
+<div class="adorno-lateral izq" aria-hidden="true"></div>
+<div class="adorno-lateral der" aria-hidden="true"></div>
+
+<section class="hero">
+
+    <div class="marco-hero"></div>
+
+    <div class="hero-contenido">
+
+        <div class="mini">
+            Una noche mágica comienza
+        </div>
+
+        <div class="hero-sub">
+            MIS 15 AÑOS
+        </div>
+      <br>
+        <h1>
+            Morena
+        </h1>
+
+        <div class="linea"></div>
+
+        <p class="hero-frase">
+
+            Quiero compartir con ustedes
+            una noche que voy a guardar
+            para siempre en mi corazón.
+
+        </p>
+
+
+        <button
+            class="btn btn-gold"
+            onclick="entrar()">
+
+            ✦ Entrar a la celebración
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<main id="invitacion">
+
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="intro reveal">
+
+    <div class="detalle-corona" aria-hidden="true">♕</div>
+
+<div class="rosa-dorada" aria-hidden="true"></div>
+
+<div class="script">
+        Una noche para brillar
+    </div>
+
+    <h2 class="titulo">
+        Mis 15
+    </h2>
+
+    <p class="texto">
+
+        Una etapa termina y una nueva comienza.
+        Por eso quiero celebrar este momento
+        rodeada de las personas que hacen
+        mi vida más especial.
+
+    </p>
+
+    <div class="frase-especial">
+        Que cada instante de esta noche se convierta
+        en un recuerdo para guardar en el corazón.
+    </div>
+
+    <div class="separador-elegante" aria-hidden="true">✧</div>
+
+<div class="adorno-botanico" aria-hidden="true"></div>
+
+<div class="foto-flotante" borde-rosa">
+
+        <img
+            src="foto2.jpg"
+            alt="Morena">
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CUENTA REGRESIVA
+===================================================== -->
+
+<div class="separador-elegante" aria-hidden="true">✦</div>
+
+<section class="count-section reveal">
+
+    <div class="script">
+        El momento se acerca
+    </div>
+
+    <h2 class="titulo">
+        ¿Cuánto falta?
+    </h2>
+
+
+    <div class="countdown">
+
+        <div class="time">
+
+            <strong id="dias">00</strong>
+
+            <span>Días</span>
+
+        </div>
+
+
+        <div class="time">
+
+            <strong id="horas">00</strong>
+
+            <span>Horas</span>
+
+        </div>
+
+
+        <div class="time">
+
+            <strong id="minutos">00</strong>
+
+            <span>Minutos</span>
+
+        </div>
+
+
+        <div class="time">
+
+            <strong id="segundos">00</strong>
+
+            <span>Segundos</span>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="llego"
+        id="llego"
+        style="display:none">
+
+        ¡Llegó el gran día! ✨
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FECHA
+===================================================== -->
+
+<div class="separador-elegante" aria-hidden="true">✦</div>
+
+<div class="adorno-botanico" aria-hidden="true"></div>
+
+<section class="fecha reveal">
+
+    <div class="script">
+        Reservá la fecha
+    </div>
+
+    <h2 class="titulo">
+        Nos vemos
+    </h2>
+
+
+    <div class="calendario">
+
+        <div class="cal-titulo">
+            MIS QUINCE
+        </div>
+
+        <div class="cal-dia">
+            20
+        </div>
+
+        <div class="cal-mes">
+            FEBRERO
+        </div>
+
+        <div class="cal-anio">
+            2027
+        </div>
+
+        <div class="cal-hora">
+            20:00 HS
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOTOS DE MORENA
+===================================================== -->
+
+<div class="separador-elegante" aria-hidden="true">✦</div>
+
+<div class="adorno-botanico" aria-hidden="true"></div>
+
+<section class="galeria-section reveal">
+
+    <div style="text-align:center">
+
+        <div class="script">
+            Ella es la protagonista
+        </div>
+
+        <h2 class="titulo">
+            Morena
+        </h2>
+
+        <p class="texto">
+
+            Un poquito de ella,
+            porque esta noche tiene una protagonista
+            muy especial.
+
+        </p>
+
+    </div>
+
+
+    <div class="galeria">
+
+
+        <div class="gallery-photo photo-a">
+
+            <img
+                src="foto3.jpg"
+                alt="Morena">
+
+        </div>
+
+
+        <div class="gallery-photo photo-b">
+
+            <img
+                src="foto4.jpg"
+                alt="Morena">
+
+        </div>
+
+
+        <div class="gallery-photo photo-c">
+
+            <img
+                src="foto1.jpg"
+                alt="Morena">
+
+        </div>
+
+
+        <div class="gallery-photo photo-d">
+
+            <img
+                src="foto2.jpg"
+                alt="Morena">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SALÓN
+===================================================== -->
+
+<div class="separador-elegante" aria-hidden="true">✦</div>
+
+<div class="adorno-botanico" aria-hidden="true"></div>
+
+<section class="salon reveal">
+
+    <div class="script">
+        El lugar de la celebración
+    </div>
+
+    <h2 class="titulo">
+        Plaza Norte
+    </h2>
+
+
+    <div class="salon-grid">
+
+
+        <div class="salon-photo salon-main">
+
+            <img
+                src="salon1.jpg"
+                alt="Plaza Norte">
+
+        </div>
+
+
+        <div class="salon-photo salon-small">
+
+            <img
+                src="salon2.jpg"
+                alt="Plaza Norte">
+
+        </div>
+
+
+        <div class="salon-photo salon-small">
+
+            <img
+                src="salon3.jpg"
+                alt="Plaza Norte">
+
+        </div>
+
+    </div>
+
+
+    <div class="salon-info">
+
+        <div class="salon-name">
+            Plaza Norte
+        </div>
+
+        <p class="salon-address">
+
+            Acc. Este. Km 1003<br>
+            M5570 San Martín, Mendoza
+
+        </p>
+
+
+        <a
+            class="btn btn-gold"
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=Plaza%20Norte%2C%20Acc.%20Este.%20Km%201003%2C%20M5570%20San%20Mart%C3%ADn%2C%20Mendoza">
+
+            ♧ Ver ubicación
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DRESS CODE
+===================================================== -->
+
+<div class="separador-elegante" aria-hidden="true">✦</div>
+
+<div class="adorno-botanico" aria-hidden="true"></div>
+
+<section class="dress reveal">
+
+    <div class="dress-icon">
+        ♕
+    </div>
+
+    <div class="script">
+        Para esa noche
+    </div>
+
+    <h2 class="titulo">
+        Dress Code
+    </h2>
+
+
+    <div class="dress-name">
+        Elegante sport
+    </div>
+
+
+    <p class="texto">
+
+        Vestite como te guste y disfrutá de una noche
+        especial. La idea es compartir, bailar
+        y celebrar juntos.
+
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     CANCIÓN AMBIENTAL
+===================================================== -->
+
+<audio
+    id="musicaFondo"
+    loop>
+
+    <source
+        src="cancion.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+<div class="music">
+
+    <button
+        class="music-button"
+        onclick="controlarMusica()"
+        id="musicButton">
+
+        ♪
+
+    </button>
+
+</div>
+
+
+
+<!-- =====================================================
+     CONFIRMACIÓN + CANCIONES
+===================================================== -->
+
+<div class="separador-elegante" aria-hidden="true">✦</div>
+
+<div class="adorno-botanico" aria-hidden="true"></div>
+
+<section class="songs reveal">
+
+    <div class="script">
+        <b>Hagamos nuestra playlist</b>
+    </div>
+
+    <h2 class="titulo">
+        ¿Venís a mis 15?
+    </h2>
+
+
+    <p class="texto" style="color:white">
+
+        Confirmá tu asistencia y dejá una canción
+        para que podamos tenerla en cuenta durante la fiesta.
+
+    </p>
+
+
+    <div class="form">
+
+        <form id="formCancion">
+
+
+            <label>
+
+                Tu nombre
+
+                <input
+                    id="nombreInvitado"
+                    type="text"
+                    placeholder="Tu nombre"
+                    required>
+
+            </label>
+
+
+            <label>
+
+                ¿Vas a asistir?
+
+                <select
+                    id="asistenciaInvitado"
+                    required>
+
+                    <option value="">
+                        Seleccioná una opción
+                    </option>
+
+                    <option value="si">
+                        Sí, voy a asistir
+                    </option>
+
+                    <option value="no">
+                        No voy a poder asistir
+                    </option>
+
+                </select>
+
+            </label>
+
+
+            <label>
+
+                ¿Cuántos acompañantes?
+
+                <input
+                    id="acompanantesInvitado"
+                    type="number"
+                    min="0"
+                    max="10"
+                    value="0"
+                    placeholder="0">
+
+            </label>
+
+
+            <label>
+
+                Canción
+
+                <input
+                    id="nombreCancion"
+                    type="text"
+                    placeholder="Nombre de la canción">
+
+            </label>
+
+
+            <label>
+
+                Artista
+
+                <input
+                    id="artistaCancion"
+                    type="text"
+                    placeholder="Artista">
+
+            </label>
+
+
+            <button
+                class="btn btn-gold"
+                style="width:100%"
+                type="submit">
+
+                ✦ Confirmar asistencia
+
+            </button>
+
+
+            <div
+                id="mensaje"
+                style="
+                text-align:center;
+                margin-top:15px;
+                font-size:12px;
+                ">
+
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CIERRE
+===================================================== -->
+
+<div class="separador-elegante" aria-hidden="true">✦</div>
+
+<section class="cierre reveal">
+
+    <div class="detalle-corona" aria-hidden="true">♕</div>
+
+    <div class="script">
+        Gracias por acompañarme
+    </div>
+
+
+    <div class="cierre-foto" borde-rosa">
+
+        <img
+            src="foto3.jpg"
+            alt="Morena">
+
+    </div>
+
+
+    <div class="linea"></div>
+
+
+    <p class="texto">
+
+        Espero que podamos disfrutar,
+        bailar y crear juntos
+        una noche que quede para siempre.
+
+    </p>
+
+
+    <div class="cierre-nombre">
+        Morena
+    </div>
+
+
+    <div
+        style="
+        color:#c19b48;
+        letter-spacing:5px;
+        font-size:11px;
+        margin-top:10px;
+        ">
+
+        20 · 02 · 2027
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+
+<script>
+
+/* =========================================================
+   FECHA DEL EVENTO
+========================================================= */
+
+const fechaEvento =
+new Date("2027-02-20T20:00:00-03:00").getTime();
+
+
+/* =========================================================
+   CUENTA REGRESIVA
+========================================================= */
+
+function actualizar(){
+
+    const ahora =
+    new Date().getTime();
+
+    const diferencia =
+    fechaEvento - ahora;
+
+
+    if(diferencia <= 0){
+
+        document.getElementById("dias").textContent="00";
+
+        document.getElementById("horas").textContent="00";
+
+        document.getElementById("minutos").textContent="00";
+
+        document.getElementById("segundos").textContent="00";
+
+        document.getElementById("llego").style.display="block";
+
+        return;
+    }
+
+
+    const dias =
+    Math.floor(
+        diferencia/(1000*60*60*24)
+    );
+
+
+    const horas =
+    Math.floor(
+        (diferencia/(1000*60*60))%24
+    );
+
+
+    const minutos =
+    Math.floor(
+        (diferencia/(1000*60))%60
+    );
+
+
+    const segundos =
+    Math.floor(
+        (diferencia/1000)%60
+    );
+
+
+    document.getElementById("dias")
+    .textContent =
+    String(dias).padStart(2,"0");
+
+
+    document.getElementById("horas")
+    .textContent =
+    String(horas).padStart(2,"0");
+
+
+    document.getElementById("minutos")
+    .textContent =
+    String(minutos).padStart(2,"0");
+
+
+    document.getElementById("segundos")
+    .textContent =
+    String(segundos).padStart(2,"0");
+
+}
+
+
+actualizar();
+
+setInterval(actualizar,1000);
+
+
+
+/* =========================================================
+   ENTRAR
+========================================================= */
+
+function entrar(){
+
+    document
+    .getElementById("invitacion")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+
+    iniciarMusica();
+
+}
+
+
+
+/* =========================================================
+   MÚSICA DE FONDO
+========================================================= */
+
+const audio =
+document.getElementById("musicaFondo");
+
+const boton =
+document.getElementById("musicButton");
+
+
+function iniciarMusica(){
+
+    audio.volume=.22;
+
+    audio.play()
+    .then(()=>{
+
+        boton.textContent="Ⅱ";
+
+    })
+    .catch(()=>{
+
+        console.log(
+            "El navegador requiere interacción para reproducir audio."
+        );
+
+    });
+
+}
+
+
+function controlarMusica(){
+
+    if(audio.paused){
+
+        iniciarMusica();
+
+    }else{
+
+        audio.pause();
+
+        boton.textContent="♪";
+
+    }
+
+}
+
+
+
+/* =========================================================
+   ANIMACIONES AL HACER SCROLL
+========================================================= */
+
+const observador =
+new IntersectionObserver(
+
+    elementos => {
+
+        elementos.forEach(elemento => {
+
+            if(elemento.isIntersecting){
+
+                elemento.target
+                .classList
+                .add("visible");
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold:.12
+    }
+
+);
+
+
+document
+.querySelectorAll(".reveal")
+.forEach(elemento =>
+observador.observe(elemento)
+);
+
+
+
+/* =========================================================
+   SUPABASE
+========================================================= */
+
+const SUPABASE_URL =
+"https://abbeluzpxxihjwyxikea.supabase.co";
+
+const SUPABASE_KEY =
+"sb_publishable_UKQbKajVrjeALhZHjbPndQ_GRTzVD80";
+
+
+
+/* =========================================================
+   CONFIRMACIÓN DE ASISTENCIA
+========================================================= */
+
+const formulario =
+document.getElementById("formCancion");
+
+
+formulario.addEventListener(
+"submit",
+
+async function(e){
+
+    e.preventDefault();
+
+
+    const nombre =
+    document
+    .getElementById("nombreInvitado")
+    .value
+    .trim();
+
+
+    const asistencia =
+    document
+    .getElementById("asistenciaInvitado")
+    .value;
+
+
+    let acompanantes =
+    Number(
+        document
+        .getElementById("acompanantesInvitado")
+        .value
+    );
+
+
+    const cancion =
+    document
+    .getElementById("nombreCancion")
+    .value
+    .trim();
+
+
+    const artista =
+    document
+    .getElementById("artistaCancion")
+    .value
+    .trim();
+
+
+    const mensaje =
+    document.getElementById("mensaje");
+
+
+    /* Si no asiste, no puede llevar acompañantes */
+
+    if(asistencia === "no"){
+
+        acompanantes = 0;
+
+    }
+
+
+    /* Canción completa */
+
+    let cancionCompleta = null;
+
+
+    if(cancion !== ""){
+
+        if(artista !== ""){
+
+            cancionCompleta =
+            cancion +
+            " - " +
+            artista;
+
+        }else{
+
+            cancionCompleta =
+            cancion;
+
+        }
+
+    }
+
+
+    /* Datos que se guardan en Supabase */
+
+    const datos = {
+
+        nombre: nombre,
+
+        asistencia: asistencia,
+
+        acompanantes: acompanantes,
+
+        cancion: cancionCompleta
+
+    };
+
+
+    mensaje.textContent =
+    "Guardando respuesta...";
+
+
+    try{
+
+        const respuesta =
+        await fetch(
+
+            SUPABASE_URL +
+            "/rest/v1/respuestas",
+
+            {
+
+                method:"POST",
+
+                headers:{
+
+                    "Content-Type":
+                    "application/json",
+
+                    "apikey":
+                    SUPABASE_KEY,
+
+                    "Authorization":
+                    "Bearer " +
+                    SUPABASE_KEY,
+
+                    "Prefer":
+                    "return=minimal"
+
+                },
+
+                body:
+                JSON.stringify(datos)
+
+            }
+
+        );
+
+
+        if(respuesta.ok){
+
+            mensaje.textContent =
+            "¡Listo! Tu respuesta fue guardada 💕";
+
+
+            formulario.reset();
+
+
+            document
+            .getElementById(
+                "acompanantesInvitado"
+            )
+            .value = "0";
+
+
+        }else{
+
+            const error =
+            await respuesta.text();
+
+
+            console.error(
+                "Error de Supabase:",
+                error
+            );
+
+
+            mensaje.textContent =
+            "Hubo un error al guardar la respuesta.";
+
+        }
+
+
+    }catch(error){
+
+        console.error(
+            "Error de conexión:",
+            error
+        );
+
+
+        mensaje.textContent =
+        "No se pudo conectar con el servidor.";
+
+    }
+
+}
+
+);
+
+</script>
+
+</body>
+</html>
