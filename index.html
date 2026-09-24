@@ -1041,6 +1041,35 @@ body::before{
 }
 
 
+/* EJEMPLOS DE VESTIMENTA */
+.vestimenta-ejemplos{
+    max-width:620px;
+    margin:28px auto 0;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+}
+.vestimenta-foto{
+    position:relative;
+    padding:6px;
+    background:#fff;
+    border:1px solid var(--dorado);
+    box-shadow:0 12px 30px rgba(90,40,60,.10);
+}
+.vestimenta-foto img{
+    display:block;
+    width:100%;
+    aspect-ratio:3/4;
+    object-fit:cover;
+}
+@media(max-width:700px){
+    .vestimenta-ejemplos{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+        padding:0 10px;
+    }
+}
+
 /* =========================================================
    ENTRADA
 ========================================================= */
@@ -1082,7 +1111,7 @@ body::before{
 
     font-family:var(--titulo);
 
-    font-size:75px;
+    font-size:35px;
 
     color:#a05e78;
 
@@ -1956,7 +1985,7 @@ body::before{
 
 
     .precio{
-        font-size:55px;
+        font-size:38px;
     }
 
 
@@ -1964,6 +1993,70 @@ body::before{
         font-size:70px;
     }
 
+}
+
+
+/* =====================================================
+   MESA DE REGALOS
+===================================================== */
+
+.regalo{
+    padding:110px 20px;
+    text-align:center;
+    background:#fff;
+}
+
+.regalo .regalo-texto{
+    max-width:620px;
+    margin:25px auto;
+    line-height:1.9;
+    font-size:14px;
+    color:var(--texto-suave);
+}
+
+.regalo .boton-datos{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:48px;
+    padding:12px 28px;
+    border-radius:50px;
+    border:1px solid var(--dorado);
+    background:linear-gradient(135deg,#e6c86e,#b58a32);
+    color:white;
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:.35s;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+.regalo .boton-datos:hover{
+    transform:translateY(-3px);
+}
+
+.regalo .datos-regalo{
+    max-width:430px;
+    margin:25px auto 0;
+    padding:25px;
+    background:#fff;
+    border:1px solid var(--dorado);
+    box-shadow:0 15px 40px rgba(90,40,60,.10);
+    display:none;
+}
+
+.regalo .datos-regalo.visible{
+    display:block;
+}
+
+.regalo .datos-regalo p{
+    margin:0 0 16px;
+    line-height:1.6;
+}
+
+.regalo .datos-regalo p:last-child{
+    margin-bottom:0;
 }
 
 </style>
@@ -2184,7 +2277,7 @@ body::before{
     </div>
 
     <h2 class="titulo">
-        Nos vemos
+        Nos vemos el
     </h2>
 
 
@@ -2233,7 +2326,7 @@ body::before{
         </div>
 
         <h2 class="titulo">
-            Morena
+            More
         </h2>
 
         <p class="texto">
@@ -2271,7 +2364,7 @@ body::before{
         <div class="gallery-photo photo-c">
 
             <img
-                src="foto1.jpg"
+                src="foto5.jpg"
                 alt="Morena">
 
         </div>
@@ -2280,7 +2373,7 @@ body::before{
         <div class="gallery-photo photo-d">
 
             <img
-                src="foto2.jpg"
+                src="foto6.jpg"
                 alt="Morena">
 
         </div>
@@ -2397,17 +2490,30 @@ body::before{
     <div class="dress-name">
         Elegante sport
     </div>
-
-
     <p class="texto">
 
-        Vestite como te guste y disfrutá de una noche
-        especial. La idea es compartir, bailar
-        y celebrar juntos.
+       Ejemplo a continuacion
 
     </p>
+    <div class="vestimenta-ejemplos" aria-label="Ejemplos de vestimenta">
+        <div class="vestimenta-foto">
+            <img src="ejemplo1.jpg" alt="Ejemplo de vestimenta elegante sport 1">
+        </div>
+        <div class="vestimenta-foto">
+            <img src="ejemplo2.jpg" alt="Ejemplo de vestimenta elegante sport 2">
+        </div>
+        <div class="vestimenta-foto">
+            <img src="ejemplo3.jpg" alt="Ejemplo de vestimenta elegante sport 3">
+        </div>
+        <div class="vestimenta-foto">
+            <img src="ejemplo4.jpg" alt="Ejemplo de vestimenta elegante sport 4">
+        </div>
+    </div>
+
+    
 
 </section>
+
 
 
 
@@ -2452,7 +2558,7 @@ body::before{
 <section class="songs reveal">
 
     <div class="script">
-        <b>Hagamos nuestra playlist</b>
+        Hagamos nuestra playlist
     </div>
 
     <h2 class="titulo">
@@ -2558,6 +2664,13 @@ body::before{
                 ✦ Confirmar asistencia
 
             </button>
+					<p  class="texto" style="color:white">
+
+						<b>Al confimar tu asistecia,porfavor contactanos si 
+						necesitas opcion celiaca o vegerariana, asi podemos 
+						tenerlo preparado especialmente para vos.</b>
+
+					</p>
 
 
             <div
@@ -2578,6 +2691,38 @@ body::before{
 
 
 
+
+<!-- =====================================================
+     MESA DE REGALOS
+===================================================== -->
+
+<div class="separador-elegante" aria-hidden="true">✦</div>
+
+<section class="regalo reveal">
+    <div class="script">
+        Mesa de regalos
+    </div>
+
+    <p class="regalo-texto">
+        Tu precencia es el regalo mas grande que podas darme,
+        pero si deseas hecerme un adicional, puedes hacerlo
+        a traves del siguiente medio.
+    </p>
+
+    <button class="boton-datos" type="button"
+        onclick="this.nextElementSibling.classList.toggle('visible')">
+        Ver datos
+    </button>
+
+    <div class="datos-regalo">
+        <p><strong>CBU</strong><br>4530000800015606447892</p>
+        <p><strong>Alias</strong><br>uma.garrido</p>
+        <p><strong>Titular</strong><br>Uma Morena Garrido</p>
+        <p><strong>CUIL</strong><br>27522845189</p>
+        <p><strong>Naranja X</strong></p>
+    </div>
+</section>
+
 <!-- =====================================================
      CIERRE
 ===================================================== -->
@@ -2596,7 +2741,7 @@ body::before{
     <div class="cierre-foto" borde-rosa">
 
         <img
-            src="foto3.jpg"
+            src="foto7.jpg"
             alt="Morena">
 
     </div>
